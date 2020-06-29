@@ -3,7 +3,10 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["plugin:react/recommended", "standard"],
+  "extends": [
+    "plugin:react/recommended",
+    "standard"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -16,6 +19,11 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "space-before-function-paren": "off"
+  }
 }
