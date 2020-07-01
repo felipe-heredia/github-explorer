@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, FormEvent, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import logoImage from '../../assets/logo.svg'
 import api from '../../services/api'
@@ -67,7 +68,7 @@ const Dashboard: React.FC = () => {
 
       <S.Repositories>
         {repositories.map(repository => (
-          <a key={repository.full_name} href="teste">
+          <Link key={repository.full_name} to={`/repository/${repository.full_name}`}>
             <img
               src={repository.owner.avatar_url}
               alt={repository.owner.login}
@@ -77,7 +78,7 @@ const Dashboard: React.FC = () => {
               <p>{repository.description}</p>
             </div>
             <S.Arrow />
-          </a>
+          </Link>
         ))}
       </S.Repositories>
     </>
